@@ -1,0 +1,8 @@
+
+<div id='user_image' class='text-white'>
+  <%= simple_form_for [@list] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit 'Save List', class: 'btn btn-danger text-white' %>
+  <% end %>
+</div>

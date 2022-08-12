@@ -1,13 +1,14 @@
+
+<div id="banner">
+  <h1>Choose your list wisely...</h1>
+  <%# <a class="btn btn-gradient" href="lists/new">Add list</a> %>
+  <%= link_to "Add list", new_list_path, class: "btn btn-gradient" %>
+</div>
+
 <div class="container">
-  <div class="d-flex justify-content-between align-items-center mt-3">
-    <h1>Lists</h1>
-    <%= link_to lists_path do %>
-      <i class="fas fa-plus-square btn-light"></i>
-    <% end %>
-  </div>
-  <div class="cards mb-5">
-    <% @lists.each do |list| %>
+  <% @lists.each do |list| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %>)">
       <%= list.name %>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
