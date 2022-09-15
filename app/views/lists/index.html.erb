@@ -1,14 +1,17 @@
+<div id="background">
+  <div id="banner">
+  </div>
 
-<div id="banner">
-  <h1>Choose your list wisely...</h1>
-  <%# <a class="btn btn-gradient" href="lists/new">Add list</a> %>
-  <%= link_to "Add list", new_list_path, class: "btn btn-gradient" %>
-</div>
+  <div id="title_button">
+    <h1>Happy Movie Watching...</h1>
+    <%= link_to "Add List", new_list_path, class: "btn btn-gradient" %>
+  </div>
 
-<div class="container">
-  <% @lists.each do |list| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %>)">
-      <%= list.name %>
-    </div>
-  <% end %>
+  <div class="cards">
+    <% @lists.each do |list| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <%= list.name %>
+      </div>
+    <% end %>
+  </div>
 </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsWatchList</title>
+    <title>MyFlix</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -14,7 +14,7 @@
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
+          <p id="logo">MyFlix</p>
         </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -23,15 +23,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
           <li class="nav-item active">
-          <%= link_to "Home", lists_path, class:"nav-link text-white" %>
-            <%# <a class="nav-link text-white" href="lists">Home</a> %>
+          <%= link_to "Home", lists_path, class:"nav-link font-weight-bold text-white"%>
           </li>
           <li class="nav-item dropdown">
-            <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
+          <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://media-exp1.licdn.com/dms/image/C5103AQElW6RLpcTF1Q/profile-displayphoto-shrink_800_800/0/1552818706998?e=1666224000&amp;v=beta&amp;t=IvxQYdMKUWx54-1-o5UgWgrT27qBlNVLjTgYPm9UndU" />
+            <div class="dropdown-menu dropdown-menu-end " aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" data-turbo-method="delete" href="#">Action 1</a>
+              <a class="dropdown-item" data-turbo-method="delete" href="#">Action 2</a>
+              <a class="dropdown-item" data-turbo-method="delete" href="#">Action 3</a>
+              <a class="dropdown-item" id="logout" data-turbo-method="delete" href="#">Log out</a>
             </div>
           </li>
       </ul>
